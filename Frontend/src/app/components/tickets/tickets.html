@@ -1,0 +1,37 @@
+<div class="tickets-card">
+
+  <div class="tickets-header">
+    <div>
+      <h2>Support Tickets</h2>
+      <p>Recent support requests</p>
+    </div>
+  </div>
+
+  @if (isLoading) {
+    <div class="loading">Loading tickets...</div>
+  }
+  @if (errorMessage) {
+    <div class="error">{{ errorMessage }}</div>
+  }
+  @if (!isLoading && !errorMessage && tickets.length === 0) {
+    <div class="empty-state">No support tickets found.</div>
+  }
+  @if (!isLoading && tickets.length > 0) {
+   <div class="tickets-list">
+      @for (ticket of tickets; track ticket.id) {
+
+        <div class="ticket">
+          <div class="ticket-main">
+            <h3>{{ ticket.subject }}</h3>
+            <p>{{ ticket.description }}</p>
+            <span class="ticket-id">{{ ticket.id }}</span>
+          </div>
+          <div class="ticket-meta">
+            <span class="status">{{ ticket.status }}</span>
+            <span class="priority">{{ ticket.priority }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

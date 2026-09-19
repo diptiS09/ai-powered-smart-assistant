@@ -1,0 +1,61 @@
+.activity-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  height: 100%;
+  box-sizing: border-box;
+}
+.activity-header {
+  margin-bottom: 20px;
+}
+.activity-header h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+.activity-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.activity-indicator {
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #94a3b8;
+}
+.activity-indicator.done {
+  background: #22c55e;
+}
+.activity-indicator.waiting {
+  background: #f59e0b;
+}
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.activity-message {
+  font-size: 14px;
+  color: #374151;
+}
+.activity-status {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: capitalize;
+}

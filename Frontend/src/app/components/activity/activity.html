@@ -1,0 +1,24 @@
+<div class="activity-card">
+
+  <div class="activity-header">
+    <div>
+      <h2>Agent Activity</h2>
+      <p>AI assistant actions</p>
+    </div>
+  </div>
+
+  <div class="activity-list">
+
+    @for (activity of activities; track $index) {
+      <div class="activity-item">
+        <div class="activity-indicator" [class.done]="activity.status === 'done'" 
+        [class.waiting]="activity.status === 'waiting'">
+        </div>
+        <div class="activity-content">
+          <span class="activity-message">{{ activity.message }}</span>
+          <span class="activity-status">{{ activity.status }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

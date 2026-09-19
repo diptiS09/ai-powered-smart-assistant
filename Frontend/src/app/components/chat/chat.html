@@ -1,0 +1,48 @@
+<div class="chat-wrapper">
+
+  <div class="chat-header">
+    <div>
+      <h2>AI Assistant</h2>
+      <p>Ask me about your account or support tickets</p>
+    </div>
+  </div>
+
+ <div class="messages">
+  @for (message of messages; track $index) {
+    <div class="message-row" [class.user-row]="message.role === 'user'">
+
+      <div
+        class="message"
+        [class.user-message]="message.role === 'user'"
+        [class.ai-message]="message.role === 'assistant'"
+      >
+
+        <span class="message-author">
+          {{ message.role === 'user' ? 'You' : 'AI Assistant' }}
+        </span>
+
+        <div class="message-text">
+          {{ message.content }}
+        </div>
+
+      </div>
+
+    </div>
+  }
+  @if (isLoading) {
+    <div class="message-row">
+      <div class="message ai-message">
+        <span class="message-author">AI Assistant</span>
+        <div class="message-text">Thinking...</div>
+      </div>
+    </div>
+  }
+
+</div>
+
+<form class="chat-input" (submit)="$event.preventDefault(); sendMessage()">
+  <input type="text" [formControl]="messageControl" placeholder="Ask something..."/>
+  <button type="submit">Send</button>
+</form>
+
+</div>

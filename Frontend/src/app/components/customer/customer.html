@@ -1,0 +1,45 @@
+<div class="customer-card">
+
+  <h2>Customer Information</h2>
+
+  @if (isLoading) {
+    <div class="loading">
+      Loading customer information...
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="error">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (customer && !isLoading) {
+
+    <div class="customer-info">
+
+      <div class="info-row">
+        <span class="label">Customer ID: </span>
+        <span>{{ customer.id }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Name: </span>
+        <span>{{ customer.name }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Email: </span>
+        <span>{{ customer.email }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Phone: </span>
+        <span>{{ customer.phone }}</span>
+      </div>
+
+    </div>
+
+  }
+
+</div>

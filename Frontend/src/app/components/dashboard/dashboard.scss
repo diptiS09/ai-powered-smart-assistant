@@ -1,0 +1,104 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.topbar {
+  height: 72px;
+  padding: 0 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.topbar p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.online-status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(350px, 1fr) 270px;
+  gap: 16px;
+  padding: 20px 32px 16px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.customer-card,
+.chat-card,
+.activity-card {
+  min-height: 500px;
+}
+
+.tickets-card {
+  margin: 0 32px 32px;
+  padding: 20px;
+}
+
+@media (max-width: 1000px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chat-card {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .customer-card,
+  .chat-card,
+  .activity-card {
+    min-height: auto;
+  }
+
+  .tickets-card {
+    margin: 0 16px 16px;
+  }
+
+}
