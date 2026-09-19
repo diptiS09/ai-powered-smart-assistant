@@ -40,51 +40,43 @@ The assistant understands the user's request, selects the required tool, perform
 The project uses simple **in-memory mock data** for customers and support tickets.
 
 ## Project Structure
-Smart-AI-Assistant-Submission/
-│
-├── .gitignore
-├── README.md
-├── API-DOCUMENTATION.md
-│
-├── Frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── components/
-│   │   │   │   ├── chat/
-│   │   │   │   ├── customer/
-│   │   │   │   ├── tickets/
-│   │   │   │   └── activity/
-│   │   │   ├── services/
-│   │   │   │   ├── api.ts
-│   │   │   │   └── chat.ts
-│   │   │   ├── app.config.ts
-│   │   │   ├── app.routes.ts
-│   │   │   └── ...
-│   │   ├── main.ts
-│   │   └── styles.scss
-│   │
-│   ├── public/
-│   ├── angular.json
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── tsconfig.json
-│   ├── tsconfig.app.json
-│   └── tsconfig.spec.json
-│
-└── backend/
-    ├── data/
-    │   └── mockData.js
-    ├── routes/
-    │   ├── customer.routes.js
-    │   ├── ticket.routes.js
-    │   └── chat.routes.js
-    ├── services/
-    │   └── ai.service.js
-    ├── .env
-    ├── app.js
-    ├── server.js
-    ├── package.json
-    └── package-lock.json
+Smart-AI-Assistant/
+
+README.md
+API-DOCUMENTATION.md
+.gitignore
+
+frontend/
+    src/
+        app/
+            components/
+                chat/
+                customer/
+                tickets/
+                activity/
+            services/
+                api.ts
+                chat.ts
+            app.config.ts
+            app.routes.ts
+        main.ts
+        styles.scss
+    public/
+    angular.json
+    package.json
+
+backend/
+    data/
+        mockData.js
+    routes/
+        customer.routes.js
+        ticket.routes.js
+        chat.routes.js
+    services/
+        ai.service.js
+    app.js
+    server.js
+    package.json
     
 ## AI Agent Flow
 
